@@ -15,7 +15,7 @@ if @browser.eql?('headless')
         'chromeOptions' => {'args' => ['--no-default-browser-check']}
     )
 
-    Capybara.register_driver :selenium do |app|
+    Capybara.register_driver :selenium_chrome do |app|
         Capybara::Selenium::Driver.new(
             app,
             browser: :remote,
@@ -28,6 +28,6 @@ else
 end
 
 Capybara.configure do |config|
-    config.default_driver = :selenium
+    config.default_driver = :selenium_chrome
     config.default_max_wait_time = 30
 end
