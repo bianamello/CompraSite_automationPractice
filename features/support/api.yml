@@ -1,0 +1,7 @@
+qa:  
+  site: 'http://www.automationpractice.com/qa'
+  
+  
+
+prod:
+  site: 'http://www.automationpractice.com/'
