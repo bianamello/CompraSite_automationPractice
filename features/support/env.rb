@@ -5,6 +5,10 @@ require 'rspec'
 require 'selenium-webdriver'
 require 'site_prism'
 
+$profile = ENV['PROFILE']
+api_configs = YAML.load_file('./features/support/api.yml')
+$api = api_configs[$profile]
+
 @browser = ENV['BROWSER']
 
 if @browser.eql?('headless')
