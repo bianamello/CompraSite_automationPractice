@@ -1,6 +1,6 @@
 ---
 base: --no-source --color --format pretty -p html
-default: --profile qa
+default: --profile prod
 html: --format html --out=reports/resultTest.html
 json: --format json --out=reports/resultTest.json
 
