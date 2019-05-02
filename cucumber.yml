@@ -1,7 +1,10 @@
 ---
-default: --format pretty -p html
+base: --no-source --color --format pretty -p html
+default: --profile qa
 html: --format html --out=reports/resultTest.html
 json: --format json --out=reports/resultTest.json
 
-ci: -p json --format progress -p headless
+qa: --profile base PROFILE=qa
+prod: --profile base PROFILE=prod
+ci: -p json --format progress -p headless -p prod
 headless: BROWSER=headless
